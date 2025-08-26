@@ -123,6 +123,39 @@ void inserirElemento()
 void excluirElemento()
 {
 
+	//verifica se o numero que quer ser exluido esta na lista
+	int numeroExcluido;
+	int indice = -1;
+
+
+	cout << "Digite o numero a ser excluido: ";
+	cin >> numeroExcluido;
+
+	for (int i = 0; i < nElementos; i++)
+	{
+
+		if (numeroExcluido == lista[i]) {
+			indice = i;
+			nElementos--;
+		}
+	}
+
+	if (indice != -1) {
+		for (int i = indice; i < MAX; i++) {
+			lista[i] = lista[i + 1];
+
+		}
+
+	}
+
+	for (int i = 0; i < MAX; i++) {
+
+
+
+		cout << "Numero excluido com sucesso\n";
+		break;
+	}
+
 
 }
 
